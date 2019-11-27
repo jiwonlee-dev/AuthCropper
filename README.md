@@ -12,11 +12,3 @@ AuthCropper
 ## Built With
 
 ## Contributing
-
-## Versioning
-
-## Authors
-
-## License
-
-## Acknowlegments
