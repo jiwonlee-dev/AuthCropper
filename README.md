@@ -64,11 +64,15 @@ These instructions will get you a copy of the project up and running in your loc
 
 3. Run
 
-   1.  Type a decryption block range
+   1. Verify the signature
+
+      First the signature (any applied signature) should be verified for the input image.
+
+   2.  Type a decryption block range
 
       ![input Example](images/inputExample.PNG)
 
-   2.  Both Encrypted and Decrypted images are generated
+   3.  Both Encrypted and Decrypted images are generated
 
       ![Enc Example](images/enc_dog.jpg)
 
@@ -76,6 +80,3 @@ These instructions will get you a copy of the project up and running in your loc
 
    
 
-## Built With
-
-## Contributing
