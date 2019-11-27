@@ -42,8 +42,39 @@ These instructions will get you a copy of the project up and running in your loc
 
 ## Deployment
 
-1.  Open **Terminal** and [change the directory](https://github.com/0nn0/terminal-mac-cheatsheet#core-commands) to the directory containing the project.
-2. 
+1. Add an image in **src** folder
+
+   ![image Example](images/dog.jpg)
+
+2. Open **main.cpp** and set an image name
+
+   1. Set an image name
+      ```
+      src = imread("yourimage.jpg", cv::ImreadModes::IMREAD_GRAYSCALE);
+      ```
+   2. Set an encrypted image name
+      ```
+      imwrite("enc_yourimage.jpg", dst);
+      ```
+   3. Set a decrypted image name
+
+      ```
+      imwrite("dec_yourimage.jpeg", Dec);
+      ```
+
+3. Run
+
+   1.  Type a decryption block range
+
+      ![input Example](images/inputExample.PNG)
+
+   2.  Both Encrypted and Decrypted images are generated
+
+      ![Enc Example](images/enc_dog.jpg)
+
+      ![Dec Example](images/Dec_dog.jpeg)
+
+   
 
 ## Built With
 

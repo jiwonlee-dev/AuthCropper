@@ -15,12 +15,12 @@ protected:
 	static const unsigned int SHA224_256_BLOCK_SIZE = (512 / 8);
 public:
 	void init();
-	void update(const unsigned char *message, unsigned int len);
-	void final(unsigned char *digest);
+	void update(const unsigned char* message, unsigned int len);
+	void final(unsigned char* digest);
 	static const unsigned int DIGEST_SIZE = (256 / 8);
 
 protected:
-	void transform(const unsigned char *message, unsigned int block_nb);
+	void transform(const unsigned char* message, unsigned int block_nb);
 	unsigned int m_tot_len;
 	unsigned int m_len;
 	unsigned char m_block[2 * SHA224_256_BLOCK_SIZE];
@@ -76,12 +76,12 @@ const unsigned int SHA256::sha256_k[64] = //UL = uint32
 
 
 
-void SHA256::transform(const unsigned char *message, unsigned int block_nb)
+void SHA256::transform(const unsigned char* message, unsigned int block_nb)
 {
 	uint32 w[64];
 	uint32 wv[8];
 	uint32 t1, t2;
-	const unsigned char *sub_block;
+	const unsigned char* sub_block;
 	int i;
 	int j;
 	for (i = 0; i < (int)block_nb; i++) {
@@ -128,11 +128,11 @@ void SHA256::init()
 	m_tot_len = 0;
 }
 
-void SHA256::update(const unsigned char *message, unsigned int len)
+void SHA256::update(const unsigned char* message, unsigned int len)
 {
 	unsigned int block_nb;
 	unsigned int new_len, rem_len, tmp_len;
-	const unsigned char *shifted_message;
+	const unsigned char* shifted_message;
 	tmp_len = SHA224_256_BLOCK_SIZE - m_len;
 	rem_len = len < tmp_len ? len : tmp_len;
 	memcpy(&m_block[m_len], message, rem_len);
@@ -151,7 +151,7 @@ void SHA256::update(const unsigned char *message, unsigned int len)
 	m_tot_len += (block_nb + 1) << 6;
 }
 
-void SHA256::final(unsigned char *digest)
+void SHA256::final(unsigned char* digest)
 {
 	unsigned int block_nb;
 	unsigned int pm_len;
@@ -179,13 +179,13 @@ std::string sha256(std::string input)
 	ctx.init();
 	ctx.update((unsigned char*)input.c_str(), input.length());
 	ctx.final(digest);
-	
-	
+
+
 
 	//char buf[SHA256::DIGEST_SIZE + 1]; // HexToASCII 안 쓰는 버전으로 할 때
 	//buf[SHA256::DIGEST_SIZE] = 0;
 	//sprintf(buf, "%s", digest); // 일단 속도는 빨라짐
-	
+
 	char buf[2 * SHA256::DIGEST_SIZE + 1]; //HexToASCII 쓴 버전
 	buf[2 * SHA256::DIGEST_SIZE] = 0;
 	for (int i = 0; i < SHA256::DIGEST_SIZE; i++)//Hex string으로 나오는 부분
