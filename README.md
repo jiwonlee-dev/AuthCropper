@@ -3,7 +3,7 @@ As surveillance systems are popular, the privacy of the recorded video becomes m
 
 Currently, this project will show a cropped image with a single image file acquired.
 
-![AuthCropper Example](images/AuthCropperExample.png)
+![AuthCropper Example](images/AuthCropperExample.PNG)
 
 ## Getting Started
 
