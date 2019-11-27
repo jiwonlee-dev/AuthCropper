@@ -11,11 +11,29 @@ These instructions will get you a copy of the project up and running in your loc
 
 ### Prerequisites
 
-OpenCV
+* [OpenCV](https://docs.opencv.org/4.1.2/d7/d9f/tutorial_linux_install.html)
 
-OpenSSL
+* [OpenSSL](https://github.com/openssl/openssl/blob/master/INSTALL)
 
-PBC Library
+* [PBC Library](https://crypto.stanford.edu/pbc/download.html)
+
+  The PBC library needs [the GMP library](https://gmplib.org/).
+
+  This build system has been tested and works on Linux and Mac OS X with a fink installation.
+
+	```
+	$ ./configure
+	$ make
+	$ make install
+	```
+
+	On Windows, the configure command requires a couple of options:
+
+	```
+	$ ./configure -disable-static -enable-shared
+	```
+
+	By default the library is installed in `/usr/local/lib`. On some systems, this may not be in the library path. One way to fix this is to edit `/etc/ld.so.conf` and run `ldconfig`.
 
 ### Installing
 
