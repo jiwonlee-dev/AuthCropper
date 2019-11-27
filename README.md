@@ -37,7 +37,13 @@ These instructions will get you a copy of the project up and running in your loc
 
 ### Installing
 
+1. Clone or [download](https://github.com/snp-lab/AuthCropper/archive/master.zip) the project
+2. If the project is in a zip, unzip it.
+
 ## Deployment
+
+1.  Open **Terminal** and [change the directory](https://github.com/0nn0/terminal-mac-cheatsheet#core-commands) to the directory containing the project.
+2. 
 
 ## Built With
 
