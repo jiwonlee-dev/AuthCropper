@@ -3,11 +3,19 @@ As surveillance systems are popular, the privacy of the recorded video becomes m
 
 Currently, this project will show a cropped image with a single image file acquired.
 
+![AuthCropper Example](images/AuthCropperExample.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running in your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
+
+OpenCV
+
+OpenSSL
+
+PBC Library
 
 ### Installing
 
